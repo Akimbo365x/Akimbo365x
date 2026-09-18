@@ -1,0 +1,32 @@
+name: activity graph
+
+on:
+  schedule:
+    - cron: "17 */6 * * *"   # four times a day
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: [scripts/graph.mjs, .github/workflows/activity-graph.yml]
+
+permissions:
+  contents: write
+
+jobs:
+  draw:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: node scripts/graph.mjs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: commit if the curve moved
+        run: |
+          git add assets/activity-graph.svg
+          git diff --cached --quiet && exit 0
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "activity graph"
+          git push
