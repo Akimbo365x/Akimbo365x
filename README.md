@@ -6,7 +6,7 @@
 
 ## about
 
-Self-taught Solana dev from Belgium, shipping on-chain tools solo. I read the chain raw: mint and freeze authorities, holder maps, bundled wallets, first-block snipers. Nothing I build asks you to connect a wallet. Right now: **[Clearing](https://github.com/Akimbo365x/clearing)**, a rug check that shows who still controls a token before you ape in. And something `[ classified ]`. Don't trust, verify.
+Self-taught Solana dev from Belgium, shipping on-chain tools solo. I read the chain raw: mint and freeze authorities, holder maps, bundled wallets, first-block snipers. Nothing I build asks you to connect a wallet. Right now: **[Clearing](https://github.com/Akimbo365x/clearing)**, a rug check that shows who still controls a token before you ape in.
 
 📡 [clearing111.netlify.app](https://clearing111.netlify.app) · 𝕏 [@Akimbo365](https://x.com/Akimbo365)
 
